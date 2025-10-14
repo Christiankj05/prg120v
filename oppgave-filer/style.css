@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om meg</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Velkommen til min side!</h1>
+    <nav>
+      <a href="index.html">Hjem</a>
+      <a href="om.html">Om meg</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Hei!</h2>
+    <p>Jeg heter <strong>Odin</strong> og liker å programmere, spille spill og utforske naturen. Dette er et eksempel på en enkel nettside laget med HTML og CSS.</p>
+
+    <h3>Favorittaktivitet</h3>
+    <p>Jeg elsker å ta bilder av fjorder og fjell når jeg reiser rundt i Norge.</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Geirangerfjord.jpg" alt="Geirangerfjorden" width="400">
+  </main>
+
+  <footer>
+    <p>Laget av Odin © 2025</p>
+  </footer>
+
+</body>
+</html>
