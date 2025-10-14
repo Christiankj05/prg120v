@@ -1,35 +1,51 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om meg</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Generell stil for hele siden */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+}
 
-  <header>
-    <h1>Velkommen til min side!</h1>
-    <nav>
-      <a href="index.html">Hjem</a>
-      <a href="om.html">Om meg</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-  </header>
+/* Toppseksjon og navigasjon */
+header {
+  background-color: #004080;
+  color: white;
+  padding: 10px 20px;
+}
 
-  <main>
-    <h2>Hei!</h2>
-    <p>Jeg heter <strong>Odin</strong> og liker å programmere, spille spill og utforske naturen. Dette er et eksempel på en enkel nettside laget med HTML og CSS.</p>
+/* Utseende på navigasjon */
+nav {
+  margin-top: 10px;
+}
 
-    <h3>Favorittaktivitet</h3>
-    <p>Jeg elsker å ta bilder av fjorder og fjell når jeg reiser rundt i Norge.</p>
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Geirangerfjord.jpg" alt="Geirangerfjorden" width="400">
-  </main>
+nav a:hover {
+  color: #ffd700; /* gullfarget hover */
+  text-decoration: underline;
+}
 
-  <footer>
-    <p>Laget av Odin © 2025</p>
-  </footer>
+/* Innhold */
+main {
+  padding: 20px;
+}
 
-</body>
-</html>
+/* Bilder */
+img {
+  display: block;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #003060;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
