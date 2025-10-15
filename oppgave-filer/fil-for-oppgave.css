@@ -1,4 +1,4 @@
-/* Generell stil for hele siden */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f4f8;
@@ -6,14 +6,17 @@ body {
   margin: 0;
 }
 
-/* Toppseksjon og navigasjon */
 header {
-  background-color: #004080;
+  background-color: #2E8B57;
+  color: white;
+  padding: 5px 10px;
+}
+header2 {
+  background-color: #F54927;
   color: white;
   padding: 10px 20px;
 }
 
-/* Utseende på navigasjon */
 nav {
   margin-top: 10px;
 }
@@ -30,19 +33,17 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Innhold */
 main {
   padding: 20px;
 }
 
-/* Bilder */
+
 img {
   display: block;
   margin-top: 10px;
   border-radius: 8px;
 }
 
-/* Footer */
 footer {
   background-color: #003060;
   color: white;
