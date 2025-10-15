@@ -6,12 +6,12 @@ body {
   margin: 0;
 }
 
-header {
+.header1 {
   background-color: #2E8B57;
   color: white;
   padding: 5px 10px;
 }
-header2 {
+.header2 {
   background-color: #F54927;
   color: white;
   padding: 10px 20px;
