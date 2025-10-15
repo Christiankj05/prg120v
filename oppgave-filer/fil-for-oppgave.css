@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   background-color: #FF0000;
@@ -11,12 +10,14 @@ header {
   color: white;
   padding: 10px 20px;
 }
-  .top-line {
-    height: 60px;
-    background-color: #2E8B57;
-    width: 100%;
-    margin-bottom: 0.2px; 
-        }
+
+.top-line {
+  height: 60px;
+  background-color: #2E8B57;
+  width: 100%;
+  margin-bottom: 0.2px;
+}
+
 img {
   display: block;
   margin-top: 10px;
