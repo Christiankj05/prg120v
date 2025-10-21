@@ -6,14 +6,14 @@ body {
 }
 
 header {
-  background-color: #FF0000;
+  background-color: #2E8B57;
   color: white;
   padding: 10px 20px;
 }
 
 .top-line {
   height: 60px;
-  background-color: #2E8B57;
+  background-color: #FF0000;
   width: 100%;
   margin-bottom: 0.2px;
 }
