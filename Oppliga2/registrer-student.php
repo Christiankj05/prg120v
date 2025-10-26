@@ -6,9 +6,9 @@
 ?>
 <h3>Registrer studium </h3>
 <form method="post" action="" id="registrerStudiumSkjema" name="registrerStudiumSkjema">
+Klassekode  <input type="text" id="klassekode" name="klassekode" required /> <br/>
 Studiumkode <input type="text" id="studiumkode" name="studiumkode" required /> <br/>
 Studiumnavn <input type="text" id="studiumnavn" name="studiumnavn" required /> <br/>
-Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
 <input type="submit" value="Registrer studium" id="registrerStudiumKnapp" name="registrerStudiumKnapp" />
 <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
