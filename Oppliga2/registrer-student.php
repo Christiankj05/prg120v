@@ -17,7 +17,7 @@ if (isset($_POST ["registrerStudiumKnapp"]))
 {
 $studiumkode=$_POST ["studiumkode"];
 $studiumnavn=$_POST ["studiumnavn"];
-$studiumnavn=$_POST ["klassekode"];
+$klassekode=$_POST ["klassekode"];
 if (!$studiumkode || !$studiumnavn || !$klassekode)
 {
 print ("Alle felt m&aring; fylles ut");
