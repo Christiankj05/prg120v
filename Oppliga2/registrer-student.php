@@ -33,7 +33,7 @@ if (isset($_POST["registrerStudiumKnapp"]))
 
         if ($antallRader != 0) /* studiet er registrert fra før */
         {
-            print("\033[Dette studiet finnes allerede\033[0m\n");
+            print '<span style="color: red;">This text is red!</span>';
         }
         else
         {
