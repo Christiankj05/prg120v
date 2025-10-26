@@ -8,6 +8,7 @@
 <form method="post" action="" id="registrerStudiumSkjema" name="registrerStudiumSkjema">
 Studiumkode <input type="text" id="studiumkode" name="studiumkode" required /> <br/>
 Studiumnavn <input type="text" id="studiumnavn" name="studiumnavn" required /> <br/>
+Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
 <input type="submit" value="Registrer studium" id="registrerStudiumKnapp" name="registrerStudiumKnapp" />
 <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
@@ -16,7 +17,8 @@ if (isset($_POST ["registrerStudiumKnapp"]))
 {
 $studiumkode=$_POST ["studiumkode"];
 $studiumnavn=$_POST ["studiumnavn"];
-if (!$studiumkode || !$studiumnavn)
+$studiumnavn=$_POST ["klassekode"];
+if (!$studiumkode || !$studiumnavn || !$klassekode)
 {
 print ("Alle felt m&aring; fylles ut");
 }
@@ -32,11 +34,11 @@ print ("Studiet er registrert fra f&oslashr");
 }
 else
 {
-$sqlSetning="INSERT INTO studium (studiumkode,studiumnavn)
-VALUES('$studiumkode','$studiumnavn');";
+$sqlSetning="INSERT INTO studium (studiumkode,studiumnavn,klassekode)
+VALUES('$studiumkode','$studiumnavn','$klassekode');";
 mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
 /* SQL-setning sendt til database-serveren */
-print ("F&oslash;lgende studium er n&aring; registrert: $studiumkode $studiumnavn");
+print ("F&oslash;lgende studium er n&aring; registrert: $studiumkode $studiumnavn $klassekode");
 }
 }
 }
