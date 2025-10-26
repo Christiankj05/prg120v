@@ -25,7 +25,7 @@ print ("Alle felt m&aring; fylles ut");
 else
 {
 include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
-$sqlSetning="SELECT * FROM studium WHERE studiumkode='$studiumkode';";
+$sqlSetning="SELECT * FROM klasse WHERE studiumkode='$studiumkode';";
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
 $antallRader=mysqli_num_rows($sqlResultat);
 if ($antallRader!=0) /* studiet er registrert fra før */
