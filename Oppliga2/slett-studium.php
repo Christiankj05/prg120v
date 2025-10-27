@@ -18,16 +18,24 @@
 
 <?php
 if (isset($_POST["slettKlasseKnapp"])) {
-  include("db-tilkobling.php");
-  $klassekode = $_POST["klassekode"];
-
-  if (!$klassekode) {
-    print("Du har glemt å velge en klassekode");
-  } else {
     include("db-tilkobling.php");
-    $sqlSetning = "DELETE FROM klasse WHERE klassekode='$klassekode';";
-    mysqli_query($db, $sqlSetning) or die("ikke mulig &aring; slette data i databasen");
-    print("Denne klassen er nå slettet: $klassekode <br />");
-  }
+    $klassekode = $_POST["klassekode"];
+
+    if (!$klassekode) {
+        print("Du har glemt å velge en klassekode");
+    } else {
+        // Sjekk om det finnes studenter i klassen
+        $sqlCheck = "SELECT * FROM student WHERE klassekode='$klassekode';";
+        $resultCheck = mysqli_query($db, $sqlCheck) or die("ikke mulig &aring; hente studentdata");
+        
+        if (mysqli_num_rows($resultCheck) > 0) {
+            // Det finnes studenter, sletting ikke lov
+            print('<span style="color:red;">Kan ikke slette klassen, det finnes studenter registrert i den!</span>');
+        } else {
+            // Ingen studenter, slett klassen
+            $sqlSetning = "DELETE FROM klasse WHERE klassekode='$klassekode';";
+            mysqli_query($db, $sqlSetning) or die("ikke mulig &aring; slette data i databasen");
+            print("Denne klassen er nå slettet: $klassekode <br />");
+        }
+    }
 }
-?>
