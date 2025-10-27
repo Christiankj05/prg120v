@@ -5,7 +5,7 @@
 <form method="post" action="" id="slettKlasseskjema" name="slettKlasseskjema" onSubmit="return
 bekreft()">
 Klasse <select name="klassekode" id="klassekode">
-<?php print("<option value=''>Velg klasse </option>");
+<?php print("<option value=''>Velg en student å slette </option>");
 include("dynamiske-funksjoner.php"); listeboksKlassekode(); ?>
 </select> <br/>
 <input type="submit" value="Slett klasse" name="slettKlasseKnapp" id="slettKlasseKnapp" />
