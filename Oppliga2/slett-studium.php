@@ -17,7 +17,7 @@ include("db-tilkobling.php"); /* tilkobling til database-serveren utført og val
 $klassekode=$_POST ["klassekode"];
 if (!$klassekode)
 {
-print ("Det er ikke valgt noe emne");
+print ("Du har glemt å skrive en klassekode");
 }
 else
 {
