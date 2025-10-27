@@ -11,7 +11,7 @@ Brukernavn  <input type="text" id="brukernavn" name="brukernavn" required /> <br
 Fornavn  <input type="text" id="fornavn" name="fornavn" required /> <br/>
 Etternavn  <input type="text" id="etternavn" name="etternavn" required /> <br/>
 Klassekode <select id="klassekode" name="klassekode">
-    <option value="">Velg eksisterende studiumkode</option>
+    <option value="">Velg en klasse</option>
     <?php
     while ($rad = mysqli_fetch_array($resultStudium)) {
         $kode = $rad["klassekode"];
