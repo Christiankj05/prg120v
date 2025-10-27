@@ -57,5 +57,6 @@ if (isset($_POST["registrerStudiumKnapp"])) {
             print("F&oslash;lgende klasse og studium er n&aring; registrert: $klassekode $studiumkode ($klassenavn)");
         }
     }
+  }
 }
 ?>
