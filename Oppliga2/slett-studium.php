@@ -6,7 +6,7 @@
 bekreft()">
 Klasse <select name="klassekode" id="klassekode">
 <?php print("<option value=''>Velg klasse </option>");
-include("dynamiske-funksjoner.php"); llsteboksKlassekode(); ?>
+include("dynamiske-funksjoner.php"); listeboksKlassekode(); ?>
 </select> <br/>
 <input type="submit" value="Slett klasse" name="slettKlasseKnapp" id="slettKlasseKnapp" />
 </form>
