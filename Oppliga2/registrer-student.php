@@ -47,7 +47,7 @@ if (isset($_POST["registrerStudentKnapp"])) {
             $sqlSetning = "INSERT INTO student (brukernavn, fornavn, etternavn, klassekode)
                            VALUES('$brukernavn', '$fornavn', '$etternavn', '$klassekode');";
             mysqli_query($db, $sqlSetning) or die("ikke mulig &aring; registrere data i databasen");
-            print("F&oslash;lgende student er n&aring; registrert: $fornavn $etternavn Brukernavn: ($brukernavn) Klasse: ($Klassekode)");
+            print("F&oslash;lgende student er n&aring; registrert: $fornavn $etternavn Brukernavn: ($brukernavn) Klasse: ($klassekode)");
         }
     }
   }
