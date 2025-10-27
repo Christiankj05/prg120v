@@ -4,7 +4,7 @@ include("db-tilkobling.php");
 $sqlStudium = "SELECT DISTINCT studiumkode FROM klasse ORDER BY studiumkode;";
 $resultStudium = mysqli_query($db, $sqlStudium);
 ?>
-<h3>Registrer studium</h3>
+<h3>Registrer klasse</h3>
 <form method="post" action="" id="registrerStudiumSkjema" name="registrerStudiumSkjema">
 Klassekode  <input type="text" id="klassekode" name="klassekode" required /> <br/>
 Klassenavn  <input type="text" id="klassenavn" name="klassenavn" required /> <br/>
