@@ -1,8 +1,4 @@
-?php /* slett-emne */
-/*
-/* Programmet lager et skjema for å kunne slette et emne
-/* Programmet sletter det valgte emnet
-*/
+<?php 
 ?>
 <script src="funksjoner.js"> </script>
 <h3>Slett klasse</h3>
