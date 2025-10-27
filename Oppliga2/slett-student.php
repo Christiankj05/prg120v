@@ -1,46 +1,32 @@
-<?php 
-?>
+<?php ?>
 <script src="funksjoner.js"></script>
 
-<h3>Slett student</h3>
-<form method="post" action="" id="slettStudentkjema" name="slettStudentskjema" onSubmit="return bekreft()">
-    Student 
-    <select name="brukernavn" id="brukernavn">
-        <?php 
-        print("<option value=''>Velg en student å slette</option>");
-        include("dynamiske-funksjoner.php"); 
-        listeboksstudent();  
-        ?> 
-    </select> 
-    <br/>
-    <input type="submit" value="Slett student" name="slettStudentKnapp" id="slettStudentKnapp" />
+<h3>Slett klasse</h3>
+
+<form method="post" action="" id="slettKlasseskjema" name="slettKlasseskjema" onsubmit="return bekreft()">
+  Klasse 
+  <select name="klassekode" id="klassekode">
+    <?php 
+      print("<option value=''>Velg klasse </option>");
+      include("dynamiske-funksjoner.php"); 
+      listeboksKlassekode(); 
+    ?>
+  </select>
+  <br/>
+  <input type="submit" value="Slett klasse" name="slettKlasseKnapp" id="slettKlasseKnapp" />
 </form>
 
 <?php
-if (isset($_POST["slettStudentKnapp"])) {
-    include("db-tilkobling.php");
+if (isset($_POST["slettKlasseKnapp"])) {
+  include_once("db-tilkobling.php");
+  $klassekode = $_POST["klassekode"];
 
-    $brukernavn = $_POST["brukernavn"];
-
-    if (!$brukernavn) {
-        print("Du har ikke valgt en student");
-    } else {
-        $sqlHent = "SELECT fornavn, etternavn, klassekode FROM student WHERE brukernavn='$brukernavn';";
-        $resultat = mysqli_query($db, $sqlHent) or die("Feil ved henting av studentdata");
-
-        if (mysqli_num_rows($resultat) == 0) {
-            print("Fant ingen student med brukernavn <strong>$brukernavn</strong>.");
-        } else {
-            $rad = mysqli_fetch_array($resultat);
-            $fornavn = $rad["fornavn"];
-            $etternavn = $rad["etternavn"];
-            $klassekode = $rad["klassekode"];
-
-            $sqlSlett = "DELETE FROM student WHERE brukernavn='$brukernavn';";
-            mysqli_query($db, $sqlSlett) or die("ikke mulig &aring; slette data i databasen");
-
-            print("Studenten <strong>$fornavn $etternavn</strong> (brukernavn: <strong>$brukernavn</strong>, klasse: <strong>$klassekode</strong>) er nå slettet.");
-        }
-    }
+  if (!$klassekode) {
+    print("Du har glemt å velge en klassekode");
+  } else {
+    $sqlSetning = "DELETE FROM klasse WHERE klassekode='$klassekode';";
+    mysqli_query($db, $sqlSetning) or die("ikke mulig &aring; slette data i databasen");
+    print("Denne klassen er nå slettet: $klassekode <br />");
+  }
 }
 ?>
