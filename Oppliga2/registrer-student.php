@@ -9,9 +9,8 @@ $resultStudium = mysqli_query($db, $sqlStudium);
 <form method="post" action="" id="registrerStudiumSkjema" name="registrerStudiumSkjema">
 Brukernavn  <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
 Fornavn  <input type="text" id="fornavn" name="fornavn" required /> <br/>
-Klassenavn  <input type="text" id="etternavn" name="etternavn" required /> <br/>
-Klassekode 
-<select id="klassekode" name="klassekode">
+Etternavn  <input type="text" id="etternavn" name="etternavn" required /> <br/>
+Klassekode <select id="klassekode" name="klassekode">
     <option value="">Velg eksisterende studiumkode</option>
     <?php
     while ($rad = mysqli_fetch_array($resultStudium)) {
@@ -20,6 +19,7 @@ Klassekode
     }
     ?>
 </select>
+<br>
 <input type="submit" value="Registrer student" id="registrerStudentKnapp" name="registrerStudentKnapp" />
 <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
