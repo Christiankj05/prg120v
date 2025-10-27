@@ -10,7 +10,7 @@ Klassekode  <input type="text" id="klassekode" name="klassekode" required /> <br
 Klassenavn  <input type="text" id="klassenavn" name="klassenavn" required /> <br/>
 Studiumkode 
 <select id="studiumkode" name="studiumkode">
-    <option value="">Velg eksisterende studiumkode</option>
+    <option value="">Velg studiumkode</option>
     <?php
     while ($rad = mysqli_fetch_array($resultStudium)) {
         $kode = $rad["studiumkode"];
@@ -42,13 +42,12 @@ if (isset($_POST["registrerStudiumKnapp"])) {
         } else {
             include("db-tilkobling.php");
 
-            // Check if klassekode already exists
             $sqlCheck = "SELECT * FROM klasse WHERE klassekode='$klassekode';";
             $resultCheck = mysqli_query($db, $sqlCheck) or die("ikke mulig &aring; hente data fra databasen");
             if (mysqli_num_rows($resultCheck) != 0) {
-                print '<span style="color: red;">Klassekode finnes allerede! Velg en annen kode.</span>';
+                print '<span style="color: red;">Klassekode finnes allerede prøv noe nytt istedet</span>';
             } else {
-                // Optional: still check if studium + klassenavn exists
+
                 $sqlSetning = "SELECT * FROM klasse WHERE studiumkode='$studiumkode' AND klassenavn='$klassenavn';";
                 $sqlResultat = mysqli_query($db, $sqlSetning) or die("ikke mulig &aring; hente data fra databasen");
                 $antallRader = mysqli_num_rows($sqlResultat);
