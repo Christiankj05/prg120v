@@ -26,7 +26,7 @@ Klassekode <select id="klassekode" name="klassekode">
 
 <?php
 if (isset($_POST["registrerStudentKnapp"])) {
-    $studiumkode = $_POST["brukernavn"];
+    $brukernavn = $_POST["brukernavn"];
     $fornavn = $_POST["fornavn"];
     $etternavn = $_POST["etternavn"];
     $klassekode = $_POST["klassekode"];
