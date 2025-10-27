@@ -44,7 +44,7 @@ if (isset($_POST["registrerStudiumKnapp"])) {
     } else {
         include("db-tilkobling.php");
 
-        $sqlSetning = "SELECT * FROM klasse WHERE studiumkode='$studiumkode' AND klassenavn='$klassenavn';";
+        $sqlSetning = "SELECT * FROM klasse WHERE klassekode='$klassekode' AND klassenavn='$klassenavn';";
         $sqlResultat = mysqli_query($db, $sqlSetning) or die("ikke mulig &aring; hente data fra databasen");
         $antallRader = mysqli_num_rows($sqlResultat);
 
