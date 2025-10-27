@@ -1,7 +1,7 @@
 <?php  
 include("db-tilkobling.php");
 
-// hent alle eksisterende studiumkoder for dropdown
+
 $sqlStudium = "SELECT DISTINCT studiumkode FROM klasse ORDER BY studiumkode;";
 $resultStudium = mysqli_query($db, $sqlStudium);
 ?>
