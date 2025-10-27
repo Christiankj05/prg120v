@@ -31,7 +31,10 @@ if (isset($_POST["registrerStudiumKnapp"])) {
     $klassenavn = $_POST["klassenavn"];
     $klassekode = $_POST["klassekode"];
 
-    // hvis ny studiumkode er skrevet, bruk den
+  if ($studiumkode && $ny_studiumkode && $studiumkode !== $ny_studiumkode) {
+        print('<span style="color:red;">Du er morsom, men du kan bare velge en studium kode, prøv på nytt :D </span>');
+ }
+    else {
     if ($ny_studiumkode) {
         $studiumkode = $ny_studiumkode;
     }
