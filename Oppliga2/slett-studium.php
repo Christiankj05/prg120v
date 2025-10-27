@@ -15,7 +15,7 @@ if (isset($_POST ["slettKlasseKnapp"]))
 {
 include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
 $klassekode=$_POST ["klassekode"];
-if (!klassekode)
+if (!$klassekode)
 {
 print ("Det er ikke valgt noe emne");
 }
