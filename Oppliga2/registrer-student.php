@@ -51,5 +51,4 @@ if (isset($_POST["registrerStudentKnapp"])) {
         }
     }
   }
-}
 ?>
