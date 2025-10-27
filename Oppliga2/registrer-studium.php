@@ -1,8 +1,5 @@
-<?php /* registrer-studium */
-/*
-/* Programmet lager et html-skjema for å registrere et studium
-/* Programmet registrerer data (studiumkode og klassenavn) i databasen
-*/
+<?php 
+
 ?>
 <h3>Registrer studium </h3>
 <form method="post" action="" id="registrerStudiumSkjema" name="registrerStudiumSkjema">
